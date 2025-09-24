@@ -1,4 +1,5 @@
 <!-- FILE: styles.css -->
+/* Shared styles for all pages */
 :root{
 --baby-blue:#b3d9ff; /* light */
 --sky:#99ccff; /* baby blue */
@@ -29,7 +30,7 @@ box-shadow:0 4px 20px rgba(0,0,0,.08);
 /* Active page pill */
 .nav a[aria-current="page"], .nav a.active{background:#003a80;color:#fff}
 .hero{height:60vh;min-height:380px;margin:1.25rem auto 0;border-radius:24px;overflow:hidden;display:grid;place-items:center;position:relative}
-.hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1617039223886-91b2a5f32a4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;filter:contrast(1.05) saturate(1.05)}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/65d8d0f9-ff1d-454a-89ac-3c471f5ea620.jpg?raw=true') center/cover no-repeat;filter:contrast(1.05) saturate(1.05)}
 /* Darker overlay for readability */
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,34,68,.55),rgba(0,34,68,.45))}
 /* Switch to frosted white pill with dark text so it's always legible */
@@ -47,3 +48,4 @@ box-shadow:0 4px 20px rgba(0,0,0,.08);
 .footer-inner{padding:1.25rem;color:var(--ink);text-align:center}
 /* utility */
 .hide{display:none}
+
