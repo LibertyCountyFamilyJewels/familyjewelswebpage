@@ -34,7 +34,7 @@ box-shadow:0 4px 20px rgba(0,0,0,.08);
 /* Darker overlay for readability */
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,34,68,.55),rgba(0,34,68,.45))}
 /* Switch to frosted white pill with dark text so it's always legible */
-.hero h1{position:relative;color:var(--ink);font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);padding:1rem 2rem;border-radius:18px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hero h1{position:relative;color:#fff;font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);padding:1rem 2rem;border-radius:18px;background:rgba(0,0,0,.4);backdrop-filter:blur(4px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
 .card{background:rgba(255,255,255,.94);backdrop-filter:blur(4px);border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:2rem;margin:1.25rem 0;transition:transform .2s ease}
 .card:hover{transform:translateY(-6px)}
 .catalog-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
