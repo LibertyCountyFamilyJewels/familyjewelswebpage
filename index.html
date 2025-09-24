@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Jewels</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, #b3d9ff 0%, #f8fbff 100%);
+      color: #222;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      color: #003366;
+      padding: 2rem;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      backdrop-filter: blur(8px);
+    }
+    header img {
+      max-width: 180px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(230,242,255,0.9);
+      border-bottom: 2px solid #99ccff;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      backdrop-filter: blur(6px);
+    }
+    nav a {
+      color: #003366;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #99ccff;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1617039223886-91b2a5f32a4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      border-radius: 0 0 40px 40px;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-radius: 20px;
+      margin: 2rem;
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+    .section:hover {
+      transform: translateY(-5px);
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .catalog-item {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      background: #ffffff;
+    }
+    .catalog-item:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .catalog-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .catalog-item h3 {
+      margin: 0.75rem;
+      font-family: 'Playfair Display', serif;
+      color: #004080;
+    }
+    footer {
+      background: rgba(230,242,255,0.9);
+      color: #003366;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 2px solid #99ccff;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.05);
+      backdrop-filter: blur(6px);
+    }
+    button {
+      background: #99ccff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      color: #003366;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background: #80bfff;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels Logo" />
+    <p>Elegance that lasts generations</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#staff">Staff</a>
+    <a href="#history">History</a>
+    <a href="#members">Members</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Discover Timeless Luxury</h1>
+  </div>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Family Jewels, we believe jewelry is more than an accessory — it’s a legacy. Our designs bring together timeless craftsmanship with modern elegance.</p>
+  </section>
+
+  <section id="catalog" class="section">
+    <h2>Catalog</h2>
+    <div class="catalog-grid">
+      <div class="catalog-item">
+        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=800&q=80" alt="Ring" />
+        <h3>Rings</h3>
+      </div>
+      <div class="catalog-item">
+        <img src="https://images.unsplash.com/photo-1611599533267-9aaedcfe8f9a?auto=format&fit=crop&w=800&q=80" alt="Necklace" />
+        <h3>Necklaces</h3>
+      </div>
+      <div class="catalog-item">
+        <img src="https://images.unsplash.com/photo-1600180758895-4f4e5b75a7ca?auto=format&fit=crop&w=800&q=80" alt="Bracelet" />
+        <h3>Bracelets</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="staff" class="section">
+    <h2>Our Staff</h2>
+    <p>Meet the talented artisans and jewelers who bring every piece to life.</p>
+  </section>
+
+  <section id="history" class="section">
+    <h2>Our History</h2>
+    <p>Founded with a passion for artistry, Family Jewels has been a trusted name in fine jewelry for generations. Each piece tells a story of tradition and excellence.</p>
+  </section>
+
+  <section id="members" class="section">
+    <h2>Members Area</h2>
+    <p><em>(This section will be password protected)</em></p>
+    <button onclick="login()">Enter Members Area</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Family Jewels. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function login() {
+      const password = prompt("Enter the members password:");
+      if(password === "jewel2025") {
+        alert("Welcome to the members area!");
+        // Redirect to hidden page or show exclusive content
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
+</body>
+</html>
