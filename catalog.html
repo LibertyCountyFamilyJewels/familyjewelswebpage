@@ -1,38 +1,113 @@
 <!-- FILE: catalog.html -->
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Catalog — Family Jewels</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-</head><body>
-<header class="header"><div class="header-inner container">
-<div class="brand"><a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels"/></a></div>
-<nav class="nav">
-<a href="/about">About</a>
-<a href="/catalog" aria-current="page">Catalog</a>
-<a href="/our-staff">Meet The Team</a>
-<a href="/members">Members</a>
-</nav>
-</div></header>
+<style>
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translateX(10px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.submenu a {
+  display: block;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submenu a:hover {
+  background: #f4f4f4;
+}
+
+.product:hover .submenu {
+  display: block;
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner container">
+    <div class="brand">
+      <a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels"/></a>
+    </div>
+    <nav class="nav">
+      <a href="/about">About</a>
+      <a href="/catalog" aria-current="page">Catalog</a>
+      <a href="/our-staff">Meet The Team</a>
+      <a href="/members">Members</a>
+    </nav>
+  </div>
+</header>
+
 <main class="container">
-<section class="card">
-<h1 style="font-family:'Playfair Display',serif">Our Collection</h1>
-<div class="catalog-grid">
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/products/R11089YW2_1x1_316ef5c4-0776-4740-828c-8d2985082a0c_1024x1024.jpg?v=1676926462" alt="Rings"><h3>Rings</h3></article>
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/products/N11100YW2_1x1_a6a947d4-b381-4b1d-916f-4d8c559eab80_1024x1024.jpg?v=1631493709" alt="Necklaces"><h3>Necklaces</h3></article>
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/files/B11088WR_1x1_d4e64a0b-b36d-4c96-9d90-60f760d9dce8_1024x1024.jpg?v=1716218719" alt="Bracelets"><h3>Bracelets</h3></article>
-<article class="product"><img src="https://www.watches.com/cdn/shop/products/thomas-earnshaw-ES-8049-03_C__98904.1520894850.1280.1280_1800x1800.jpg?v=1757453782" alt="Watches"><h3>Watches</h3></article>
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/products/E11076WR_1x1_7c86caab-6b21-49cd-8d9a-1677dde57ad8_1024x1024.jpg?v=1712351071" alt="Earrings"><h3>Earrings</h3></article>
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/files/R12081YXLAB2_1x1_320e3d20-959d-481e-8db7-b52617e922c0_1024x1024.jpg?v=1749421275" alt="Lab Grown"><h3>Lab Grown</h3></article>
-<article class="product"><img src="https://ferkosfinejewelry.com/cdn/shop/files/N90126Y2_1x1_b002198b-a955-41b5-9744-e3704a741a97_1024x1024.jpg?v=1749239000" alt="Gifts"><h3>Gifts</h3></article>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <section class="card">
+    <h1 style="font-family:'Playfair Display',serif">Our Collection</h1>
+    <div class="catalog-grid">
+      
+      <article class="product">
+        <img src="https://ferkosfinejewelry.com/cdn/shop/products/R11089YW2_1x1_316ef5c4-0776-4740-828c-8d2985082a0c_1024x1024.jpg?v=1676926462" alt="Rings">
+        <h3>Rings</h3>
+      </article>
+
+      <article class="product">
+        <img src="https://www.watches.com/cdn/shop/products/thomas-earnshaw-ES-8049-03_C__98904.1520894850.1280.1280_1800x1800.jpg?v=1757453782" alt="Watches">
+        <h3>Watches</h3>
+        <div class="submenu">
+          <a href="/catalog/watches/luxury">Luxury</a>
+          <a href="/catalog/watches/sport">Sport</a>
+          <a href="/catalog/watches/smart">Smart</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://ferkosfinejewelry.com/cdn/shop/products/E11076WR_1x1_7c86caab-6b21-49cd-8d9a-1677dde57ad8_1024x1024.jpg?v=1712351071" alt="Earrings">
+        <h3>Earrings</h3>
+      </article>
+      
+    </div>
+  </section>
 </main>
+
 <footer class="footer"><div class="footer-inner">© 2025 Family Jewels</div></footer>
 <script src="/script.js"></script>
-</body></html>
+</body>
+</html>
