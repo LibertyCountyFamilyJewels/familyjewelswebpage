@@ -47,6 +47,8 @@
 </div>
 </main>
 <footer>…</footer>
-<script>/* same JS */</script>
+<script>function swapImage(el){document.getElementById("mainImage").src=el.src;}
+document.addEventListener("DOMContentLoaded",()=>{const main=document.getElementById("mainImage");const row=document.querySelector(".thumbnail-row");if(main&&row&&!row.querySelector("[data-original]")){let c=document.createElement("img");c.src=main.src;c.alt="Main view";c.dataset.original="true";c.onclick=()=>{main.src=c.src};row.prepend(c);}});
+</script>
 </body>
 </html>
