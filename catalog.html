@@ -6,7 +6,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 
-<style>
+<style>/* Make catalog cards look like cards, not blue links */
+.catalog-grid a.product {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+/* Ensure card headings don't turn blue */
+.catalog-grid a.product h3 {
+  color: #111;
+  margin-top: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Submenu links look like buttons, not hyperlinks */
+.catalog-grid .submenu a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  color: #111;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  min-width: 160px;
+  max-width: 220px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Prevent hover underline */
+.catalog-grid a:hover,
+.catalog-grid a:focus {
+  text-decoration: none;
+}
+
+
+
 .catalog-grid .product {
   position: relative;
   text-align: center;
