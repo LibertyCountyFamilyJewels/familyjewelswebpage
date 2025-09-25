@@ -6,8 +6,7 @@
 <title>Bulova Phantom Men's Watch 98A229 — Family Jewels</title>
 <link rel="stylesheet" href="/styles.css">
 <style>
-/* same styles as before */
-.product-page {display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;}
+.product-page{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;}
 .product-images{display:flex;flex-direction:column;gap:15px;}
 .product-images img{width:100%;border-radius:8px;border:1px solid #ddd;}
 .thumbnail-row{display:flex;gap:10px;}
@@ -18,15 +17,17 @@
 .product-info .details{margin:20px 0;font-family:'Montserrat',sans-serif;}
 .add-to-cart{background:black;color:white;border:none;padding:14px 20px;font-size:1rem;border-radius:6px;cursor:pointer;margin-top:20px;}
 .add-to-cart:hover{background:#333;}
+.back-link{display:inline-block;margin-top:20px;text-decoration:none;color:#333;}
 </style>
 </head>
 <body>
 <header class="header"><div class="header-inner container">
-  <div class="brand"><a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels"/></a></div>
+  <div class="brand"><a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp" alt="Family Jewels"/></a></div>
   <nav class="nav"><a href="/about">About</a><a href="/catalog">Catalog</a><a href="/our-staff">Meet The Team</a><a href="/members">Members</a></nav>
 </div></header>
 
 <main class="container">
+<a href="/catalog/watches" class="back-link">← Back to Watches</a>
 <div class="product-page">
   <div class="product-images">
     <img id="mainImage" src="YOUR-MAIN-IMAGE" alt="Bulova Phantom Men's Watch 98A229">
@@ -45,14 +46,13 @@
       <p><strong>Band:</strong> Gold-Tone Stainless Steel</p>
       <p><strong>Dial:</strong> Crystal-Paved</p>
       <p><strong>Water Resistance:</strong> 30m</p>
-      <p>The Bulova Phantom dazzles with crystal accents on the dial and bracelet, designed for those who want their timepiece to make a bold, radiant statement.</p>
+      <p>The Bulova Phantom dazzles with crystal accents on the dial and bracelet, a timepiece that merges elegance with bold sparkle.</p>
     </div>
     <button class="add-to-cart">Add to Bag</button>
   </div>
 </div>
 </main>
 <footer class="footer"><div class="footer-inner">© 2025 Family Jewels</div></footer>
-
 <script>
 function swapImage(el){document.getElementById("mainImage").src=el.src;}
 document.addEventListener("DOMContentLoaded",()=>{const main=document.getElementById("mainImage");const row=document.querySelector(".thumbnail-row");if(main&&row&&!row.querySelector("[data-original]")){let c=document.createElement("img");c.src=main.src;c.alt="Main view";c.dataset.original="true";c.onclick=()=>{main.src=c.src};row.prepend(c);}});
