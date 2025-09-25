@@ -7,12 +7,11 @@
 <link rel="stylesheet" href="/styles.css">
 
 <style>
-/* --- Minimal, safe additions (won’t clash with your existing styles) --- */
 .catalog-grid .product {
   position: relative;
   text-align: center;
   cursor: pointer;
-  overflow: hidden; /* keeps overlay rounded */
+  overflow: hidden;
 }
 
 .catalog-grid .product img {
@@ -28,7 +27,6 @@
   font-family: 'Playfair Display', serif;
 }
 
-/* Hover/focus overlay for subcategories */
 .product .submenu {
   position: absolute;
   inset: 0;
@@ -48,7 +46,7 @@
 
 .product:hover .submenu,
 .product:focus-within .submenu,
-.product.open .submenu { /* open is toggled for touch devices */
+.product.open .submenu {
   opacity: 1;
   pointer-events: auto;
 }
@@ -93,62 +91,89 @@
     <h1 style="font-family:'Playfair Display',serif">Our Collection</h1>
 
     <div class="catalog-grid">
-      <!-- Rings (unchanged; add a submenu later if you want) -->
-      <article class="product">
+      <!-- Rings -->
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/products/R11089YW2_1x1_316ef5c4-0776-4740-828c-8d2985082a0c_1024x1024.jpg?v=1676926462" alt="Rings">
         <h3>Rings</h3>
-        <!-- Example if you want subcats later:
-        <div class="submenu" role="menu" aria-label="Rings subcategories">
-          <a href="/catalog/rings/engagement" role="menuitem">Engagement</a>
-          <a href="/catalog/rings/wedding" role="menuitem">Wedding Bands</a>
-          <a href="/catalog/rings/statement" role="menuitem">Statement</a>
+        <div class="submenu">
+          <a href="/catalog/rings/engagement">Engagement</a>
+          <a href="/catalog/rings/wedding-bands">Wedding Bands</a>
+          <a href="/catalog/rings/statement">Statement</a>
+          <a href="/catalog/rings/stackable">Stackable</a>
         </div>
-        -->
       </article>
 
       <!-- Necklaces -->
-      <article class="product">
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/products/N11100YW2_1x1_a6a947d4-b381-4b1d-916f-4d8c559eab80_1024x1024.jpg?v=1631493709" alt="Necklaces">
         <h3>Necklaces</h3>
+        <div class="submenu">
+          <a href="/catalog/necklaces/pendants">Pendants</a>
+          <a href="/catalog/necklaces/chains">Chains</a>
+          <a href="/catalog/necklaces/chokers">Chokers</a>
+          <a href="/catalog/necklaces/layered">Layered</a>
+        </div>
       </article>
 
       <!-- Bracelets -->
-      <article class="product">
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/files/B11088WR_1x1_d4e64a0b-b36d-4c96-9d90-60f760d9dce8_1024x1024.jpg?v=1716218719" alt="Bracelets">
         <h3>Bracelets</h3>
+        <div class="submenu">
+          <a href="/catalog/bracelets/tennis">Tennis</a>
+          <a href="/catalog/bracelets/cuffs">Cuffs</a>
+          <a href="/catalog/bracelets/bangles">Bangles</a>
+          <a href="/catalog/bracelets/charm">Charm</a>
+        </div>
       </article>
 
-      <!-- Watches (WITH subcategories overlay) -->
-      <article class="product" tabindex="0" aria-haspopup="true" aria-expanded="false">
+      <!-- Watches -->
+      <article class="product" tabindex="0">
         <img src="https://www.watches.com/cdn/shop/products/thomas-earnshaw-ES-8049-03_C__98904.1520894850.1280.1280_1800x1800.jpg?v=1757453782" alt="Watches">
         <h3>Watches</h3>
-
-        <!-- Hover/Focus/Tap submenu -->
-        <div class="submenu" role="menu" aria-label="Watches subcategories">
-          <a href="/catalog/watches/luxury" role="menuitem">Luxury</a>
-          <a href="/catalog/watches/sport" role="menuitem">Sport</a>
-          <a href="/catalog/watches/smart" role="menuitem">Smart</a>
-          <a href="/catalog/watches/dress" role="menuitem">Dress</a>
-          <a href="/catalog/watches/automatic" role="menuitem">Automatic</a>
+        <div class="submenu">
+          <a href="/catalog/watches/luxury">Luxury</a>
+          <a href="/catalog/watches/sport">Sport</a>
+          <a href="/catalog/watches/smart">Smart</a>
+          <a href="/catalog/watches/dress">Dress</a>
+          <a href="/catalog/watches/automatic">Automatic</a>
         </div>
       </article>
 
       <!-- Earrings -->
-      <article class="product">
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/products/E11076WR_1x1_7c86caab-6b21-49cd-8d9a-1677dde57ad8_1024x1024.jpg?v=1712351071" alt="Earrings">
         <h3>Earrings</h3>
+        <div class="submenu">
+          <a href="/catalog/earrings/studs">Studs</a>
+          <a href="/catalog/earrings/hoops">Hoops</a>
+          <a href="/catalog/earrings/dangles">Dangles</a>
+          <a href="/catalog/earrings/huggies">Huggies</a>
+        </div>
       </article>
 
       <!-- Lab Grown -->
-      <article class="product">
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/files/R12081YXLAB2_1x1_320e3d20-959d-481e-8db7-b52617e922c0_1024x1024.jpg?v=1749421275" alt="Lab Grown">
         <h3>Lab Grown</h3>
+        <div class="submenu">
+          <a href="/catalog/lab-grown/diamonds">Lab Diamonds</a>
+          <a href="/catalog/lab-grown/moissanite">Moissanite</a>
+          <a href="/catalog/lab-grown/sapphires">Sapphires</a>
+          <a href="/catalog/lab-grown/emeralds">Emeralds</a>
+        </div>
       </article>
 
       <!-- Gifts -->
-      <article class="product">
+      <article class="product" tabindex="0">
         <img src="https://ferkosfinejewelry.com/cdn/shop/files/N90126Y2_1x1_b002198b-a955-41b5-9744-e3704a741a97_1024x1024.jpg?v=1749239000" alt="Gifts">
         <h3>Gifts</h3>
+        <div class="submenu">
+          <a href="/catalog/gifts/under-100">Under $100</a>
+          <a href="/catalog/gifts/for-her">For Her</a>
+          <a href="/catalog/gifts/for-him">For Him</a>
+          <a href="/catalog/gifts/personalized">Personalized</a>
+        </div>
       </article>
     </div>
   </section>
@@ -158,23 +183,17 @@
 
 <script src="/script.js"></script>
 <script>
-/* Small helper for touch devices: tap tile to toggle submenu */
+/* Touch toggle for submenus */
 (function () {
   const products = document.querySelectorAll('.catalog-grid .product');
   products.forEach(p => {
-    // Only add toggle if a submenu exists
     const menu = p.querySelector('.submenu');
     if (!menu) return;
 
     p.addEventListener('click', function (e) {
-      // If a link inside the submenu was clicked, let it pass
       if (e.target.closest('.submenu a')) return;
-
-      // Toggle open on the tile (for touch)
       const isOpen = p.classList.toggle('open');
       p.setAttribute('aria-expanded', String(isOpen));
-
-      // Close others
       if (isOpen) {
         products.forEach(other => {
           if (other !== p) {
@@ -186,7 +205,6 @@
     });
   });
 
-  // Click outside closes any open submenu
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.catalog-grid .product')) {
       document.querySelectorAll('.catalog-grid .product.open').forEach(p => {
