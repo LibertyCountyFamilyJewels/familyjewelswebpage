@@ -1,48 +1,150 @@
 <!-- FILE: about.html -->
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>About — Family Jewels</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
-</head><body>
-<header class="header"><div class="header-inner container">
-<div class="brand"><a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels"/></a></div>
-<nav class="nav">
-<a href="/about" aria-current="page">About</a>
-<a href="/catalog">Catalog</a>
-<a href="/our-staff">Meet The Team</a>
-<a href="/members">Members</a>
-</nav>
-</div></header>
-<main class="container">
-<section class="card">
-<section style="max-width: 800px; margin: 0 auto; padding: 40px; line-height: 1.8; font-family: 'Playfair Display', serif; color: #333;">
-  <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Our Story</h1>
-  
-  <p style="margin-bottom: 20px;">
-    Founded in 2002 by <strong>Cyra Helifax</strong>, Family Jewels was born from a vision to create more than just a jewelry store—it was meant to be a place where stories are told, memories are honored, and traditions are carried forward.
-  </p>
-  
-  <p style="margin-bottom: 20px;">
-    Cyra, a lifelong artisan with an eye for timeless beauty, began her journey in a small studio with only a few handcrafted designs and a dream to make fine jewelry accessible without losing its personal touch. She believed that every ring, necklace, and bracelet should not only shine, but also carry meaning—whether it’s a promise, a celebration, or a legacy passed down through generations.
-  </p>
-  
-  <p style="margin-bottom: 20px;">
-    Over the years, Family Jewels has grown into a trusted name, blending <em>classic craftsmanship</em> with <em>modern design</em>. From engagement rings that mark new beginnings to heirloom pieces meant to last lifetimes, every item in our collection is chosen with care and intention.
-  </p>
-  
-  <p style="text-align: center; font-style: italic; font-size: 1.2em; color: #555;">
-    “We’re not just a store—we’re family.”
-  </p>
-  
-  <p style="text-align: center; margin-top: 10px;">
-    Our customers aren’t simply buyers; they’re part of a community built on trust, love, and shared milestones.
-  </p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About — Family Jewels</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .story-wrapper {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .story-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
 
-</main>
-<footer class="footer"><div class="footer-inner">© 2025 Family Jewels</div></footer>
-<script src="/script.js"></script>
-</body></html>
+    /* Each row */
+    .story-row {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 60px 0;
+      flex-wrap: wrap;
+    }
 
+    .story-row:nth-child(even) {
+      flex-direction: row-reverse; /* flip order every other */
+    }
+
+    .story-image {
+      flex: 1 1 40%;
+    }
+    .story-image img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .story-text {
+      flex: 1 1 55%;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .story-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    /* Section dividers */
+    .story-break {
+      height: 80px;
+      background: #f7f7f7;
+      margin: 0 -20px; /* stretch full width */
+    }
+
+    @media (max-width: 768px) {
+      .story-row {
+        flex-direction: column !important;
+      }
+      .story-image, .story-text {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp?raw=true" alt="Family Jewels"/></a>
+      </div>
+      <nav class="nav">
+        <a href="/about" aria-current="page">About</a>
+        <a href="/catalog">Catalog</a>
+        <a href="/our-staff">Meet The Team</a>
+        <a href="/members">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="story-wrapper">
+    <h1 class="story-title">Our Story</h1>
+
+    <!-- The Start -->
+    <div class="story-row">
+      <div class="story-image">
+        <img src="https://via.placeholder.com/500x400?text=Founder" alt="Founder">
+      </div>
+      <div class="story-text">
+        <h2>The Start</h2>
+        <p>
+          Founded in 2002 by <strong>Cyra Helifax</strong>, Family Jewels began with just a small studio,
+          a handful of handcrafted designs, and a dream of making fine jewelry deeply personal.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-break"></div>
+
+    <!-- The Establishment -->
+    <div class="story-row">
+      <div class="story-image">
+        <img src="https://via.placeholder.com/500x400?text=Original+Location" alt="Original Location">
+      </div>
+      <div class="story-text">
+        <h2>The Establishment</h2>
+        <p>
+          As word spread, the first Family Jewels storefront opened. It became more than just a shop—
+          it was a gathering place where stories were exchanged and milestones celebrated.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-break"></div>
+
+    <!-- The Journey to Success -->
+    <div class="story-row">
+      <div class="story-image">
+        <img src="https://via.placeholder.com/500x400?text=Journey" alt="Journey">
+      </div>
+      <div class="story-text">
+        <h2>The Journey to Success</h2>
+        <p>
+          Over the years, Family Jewels has grown into a trusted name, blending classic craftsmanship
+          with modern design. From engagements to heirlooms, our pieces continue to carry meaning across generations.
+        </p>
+      </div>
+    </div>
+
+    <div class="story-break"></div>
+
+    <!-- Add more chapters as needed -->
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">© 2025 Family Jewels</div>
+  </footer>
+</body>
+</html>
