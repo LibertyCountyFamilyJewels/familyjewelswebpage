@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bulova Phantom Men's Watch 98A229 — Family Jewels</title>
+<link rel="stylesheet" href="/styles.css">
+<style>
+.product-page{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px;}
+.product-images{display:flex;flex-direction:column;gap:15px;}
+.product-images img{width:100%;border-radius:8px;border:1px solid #ddd;}
+.thumbnail-row{display:flex;gap:10px;}
+.thumbnail-row img{width:80px;height:80px;object-fit:cover;cursor:pointer;border-radius:6px;border:1px solid #ddd;transition:border .2s ease;}
+.thumbnail-row img:hover{border-color:#333;}
+.product-info h1{font-family:'Playfair Display',serif;margin-bottom:10px;}
+.product-info p.price{font-size:1.4rem;font-weight:bold;margin:10px 0;}
+.product-info .details{margin:20px 0;font-family:'Montserrat',sans-serif;}
+.add-to-cart{background:black;color:white;border:none;padding:14px 20px;font-size:1rem;border-radius:6px;cursor:pointer;margin-top:20px;}
+.add-to-cart:hover{background:#333;}
+.back-link{display:inline-block;margin-top:20px;text-decoration:none;color:#333;}
+</style>
+<body>
+<header class="header"><div class="header-inner container">
+  <div class="brand"><a href="/"><img src="https://github.com/LibertyCountyFamilyJewels/familyjewelswebpage/blob/main/FamilyJewelsLogo.webp" alt="Family Jewels"/></a></div>
+  <nav class="nav"><a href="/about">About</a><a href="/catalog">Catalog</a><a href="/our-staff">Meet The Team</a><a href="/members">Members</a></nav>
+</div></header>
+<main class="container">
+<a href="/catalog/watches" class="back-link">← Back to Watches</a>
+<div class="product-page">
+  <div class="product-images">
+    <img id="mainImage" src="YOUR-MAIN-IMAGE" alt="COACH Chelsea Women's Watch 14504498">
+    <div class="thumbnail-row">
+      <img src="YOUR-IMAGE-1" alt="Side view" onclick="swapImage(this)">
+      <img src="YOUR-IMAGE-2" alt="Lifestyle view" onclick="swapImage(this)">
+    </div>
+  </div>
+  <div class="product-info">
+    <h1>COACH Chelsea Women's Watch 14504498</h1>
+    <p class="price">$295.00</p>
+    <div class="details">
+      <p><strong>Movement:</strong> Quartz</p>
+      <p><strong>Case Size:</strong> 34mm</p>
+      <p><strong>Band:</strong> Rose Gold Stainless Steel</p>
+      <p><strong>Dial:</strong> Floral Pattern with Logo</p>
+      <p>A feminine design blending COACH’s fashion-forward style with reliable quartz timekeeping, ideal for daily wear.</p>
+    </div>
+    <button class="add-to-cart">Add to Bag</button>
+  </div>
+</div>
+</main>
+<footer class="footer"><div class="footer-inner">© 2025 Family Jewels</div></footer>
+<script>
+function swapImage(el){document.getElementById("mainImage").src=el.src;}
+document.addEventListener("DOMContentLoaded",()=>{const main=document.getElementById("mainImage");const row=document.querySelector(".thumbnail-row");if(main&&row&&!row.querySelector("[data-original]")){let c=document.createElement("img");c.src=main.src;c.alt="Main view";c.dataset.original="true";c.onclick=()=>{main.src=c.src};row.prepend(c);}});
+</script>
+</body>
+</html>
