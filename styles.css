@@ -48,6 +48,14 @@ box-shadow:0 4px 20px rgba(0,0,0,.08);
 .footer-inner{padding:1.25rem;color:var(--ink);text-align:center}
 /* utility */
 .hide{display:none}
+
+.story-image img {
+  width: 100%;
+  max-height: 400px;   /* keeps them uniform */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /* Team grid */
 .team-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .team-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.08);transition:transform .2s ease, box-shadow .2s ease;text-align:center}
